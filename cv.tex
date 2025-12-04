@@ -1,0 +1,30 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Load styling
+\usepackage{cv-style}
+
+% Define language variable with default fallback
+\ifdefined\LANGUAGE\else\def\LANGUAGE{en}\fi
+
+% Load language-specific content
+\input{cv-content-\LANGUAGE}
+
+\begin{document}
+
+% Header
+\cvname{\myname}
+\cvcontact{\myaddress}{\myphone}{\myemail}
+
+% Summary
+\cvsummary{\mysummary}
+
+% Main sections
+\experiencesection
+\educationsection
+\skillssection
+
+% Optional sections
+\certificationssection
+\projectssection
+
+\end{document}

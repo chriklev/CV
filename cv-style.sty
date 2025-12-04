@@ -1,0 +1,136 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv-style}[2024/01/01 Professional CV Style]
+
+% =============================================================================
+% PACKAGES
+% =============================================================================
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[margin=0.5in]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}
+
+% =============================================================================
+% PAGE SETTINGS
+% =============================================================================
+\pagenumbering{gobble}  % Remove page numbers
+
+% Hyperlink styling (ATS-friendly: no colored boxes)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% =============================================================================
+% SECTION FORMATTING
+% =============================================================================
+\titleformat{\section}
+    {\large\bfseries\uppercase}
+    {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.5ex}{0.5ex}
+
+% =============================================================================
+% LIST FORMATTING
+% =============================================================================
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt}
+
+% =============================================================================
+% CUSTOM COMMANDS - Header Elements
+% =============================================================================
+
+% Name header
+% Usage: \cvname{Your Name}
+\newcommand{\cvname}[1]{%
+    \begin{center}
+        \Huge\textbf{#1}
+    \end{center}
+    \vspace{-0.5em}
+    \hrule height 0.4pt width \textwidth
+    \vspace{0.5em}
+}
+
+% Contact information
+% Usage: \cvcontact{address}{phone}{email}
+\newcommand{\cvcontact}[3]{%
+    \begin{center}
+        #1 \\
+        #2 \\
+        #3
+    \end{center}
+    \vspace{-0.5em}
+    \hrule height 0.4pt width \textwidth
+    \vspace{0.5em}
+}
+
+% Professional summary
+% Usage: \cvsummary{Your summary text}
+\newcommand{\cvsummary}[1]{%
+    \vspace{-0.5em}
+    \begin{center}
+        \textit{#1}
+    \end{center}
+}
+
+% =============================================================================
+% CUSTOM COMMANDS - Experience/Education Entries
+% =============================================================================
+
+% Role/Position entry
+% Usage: \cvrole{Company}{Location}{Title}{Dates}
+\newcommand{\cvrole}[4]{%
+    \vspace{0.5em}
+    \noindent\textbf{#1} \hfill \textbf{#2} \\
+    \textit{#3} \hfill \textit{#4}
+    \vspace{0.25em}
+}
+
+% Education entry
+% Usage: \cveducation{Institution}{Location}{Degree}{Date}
+\newcommand{\cveducation}[4]{%
+    \vspace{0.5em}
+    \noindent\textbf{#1} \hfill \textbf{#2} \\
+    \textit{#3} \hfill \textit{#4}
+}
+
+% =============================================================================
+% CUSTOM COMMANDS - Skills
+% =============================================================================
+
+% Skills list (comma-separated inline)
+% Usage: \cvskills{Skill 1, Skill 2, Skill 3}
+\newcommand{\cvskills}[1]{%
+    \vspace{0.5em}
+    \noindent #1
+}
+
+% Skills category (for grouped skills)
+% Usage: \cvskillcategory{Category Name}{Skill 1, Skill 2}
+\newcommand{\cvskillcategory}[2]{%
+    \vspace{0.25em}
+    \noindent\textbf{#1:} #2
+}
+
+% =============================================================================
+% CUSTOM COMMANDS - Certifications
+% =============================================================================
+
+% Certification list environment with category header
+% Usage: \begin{certlist}{Category Name}
+%        \item Cert 1
+%        \item Cert 2
+%        \end{certlist}
+\newenvironment{certlist}[1]{%
+    \vspace{0.25em}
+    \noindent\textbf{#1}
+    \begin{itemize}
+}{%
+    \end{itemize}
+}
+
+\endinput
