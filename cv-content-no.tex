@@ -48,17 +48,6 @@
     %     \item Administrerer datainfrastruktur med infrastruktur som kode (Terraform, Bicep, Databricks Asset Bundles)
     %     \item Jobber selvstendig og tett med kunder, med ansvar for design, implementering og leveranse
     % \end{itemize}
-    % 
-    % \textbf{Nøkkelprosjekter:}
-    % 
-    % \textit{Norli AS - Migrering av datavarehusløsning}
-    % \begin{itemize}
-    %     \item Migrerte datavarehus fra on-prem Oracle ERP til Azure Databricks og Power BI
-    %     \item Ansvarlig for design og oppsett av arkitektur, samt implementering av dataplatform med komplekse datakilder (on-prem/cloud databaser, API-er, filservere, service bus)
-    %     \item Bygget ETL-prosesser og datatransformasjoner med DBT, implementert tilgangsstyring og tilgjengeliggjøring av data
-    %     \item Leverte kundeservice-dashboard som bidro til 60\% raskere behandling av kundehenvendelser
-    %     \item Migrerer 50+ rapportsider for finans, regnskap og salg som vil brukes av over 200 sluttbrukere
-    % \end{itemize}
 
     \cvrole{Kiwi Nordstrand}{Oslo, Norge}{Låseansvarlig}{Aug 2021--Okt 2021}
 
@@ -126,15 +115,63 @@
 }
 
 % =============================================================================
-% PROSJEKTER (Valgfritt)
+% PROSJEKTER
 % =============================================================================
 \newcommand{\projectssection}{%
-    % Fjern kommentar og tilpass hvis du vil inkludere prosjekter
-    % \section{Prosjekter}
-    %
-    % \cvrole{Prosjektnavn}{}{Personlig/Åpen kildekode}{}
-    % \begin{itemize}
-    %     \item Kort beskrivelse av prosjektet og dine bidrag
-    %     \item Teknologier brukt og påvirkning/resultater oppnådd
-    % \end{itemize}
+    \section{Utvalgte Prosjekter i Axaz}
+
+    % --- NORLI ---
+    \cvrole{Norli AS}{Migrering og utvidelse av dataplatform}{Data Engineer/Platformutvikler}{}
+    \begin{itemize}
+        \item Migrerte datavarehus fra on-prem Oracle ERP til Azure Databricks og Power BI
+        \item Ansvarlig for design og oppsett av arkitektur, samt implementering av dataplatform med komplekse datakilder (on-prem/cloud databaser, API-er, filservere, service bus)
+        \item Bygget ETL-prosesser og datatransformasjoner med DBT, implementert tilgangsstyring og tilgjengeliggjøring av data
+        \item Resultat: Leverte kundeservice-dashboard som bidro til 60\% raskere behandling av kundehenvendelser
+        \item Resultat: Migrerer 50+ rapportsider for finans, regnskap og salg som vil brukes av over 200 sluttbrukere
+    \end{itemize}
+
+    % --- PRESIS INFRA ---
+    \cvrole{Presis Infra}{Rapportering på Arbeidsmiljøloven (AML)}{Data Engineer/Platformutvikler}{}
+    \begin{itemize}
+        \item Utviklet løsning for overvåking av brudd på arbeidsmiljøloven (AML) for å redusere risiko for bøter.
+        \item Integrerte timeføringsdata via Boomi til Google BigQuery og transformerte data med Dataform.
+        \item Implementerte kompleks logikk i SQL for å identifisere brudd på rullerende 24-timers og 7-dagers vinduer.
+        \item Resultat: Dashbord har gitt dem oversikt over brudd på AML slik at de kan forbygge videre brudd.
+    \end{itemize}
+
+    % --- SVERRE MONSEN ---
+    \cvrole{Sverre Monsen}{Modernisering av finansiell rapportering}{Data Engineer/Platformutvikler}{}
+    \begin{itemize}
+        \item Erstattet en manuell og tidkrevende rapporteringsløsning med et automatisert datavarehus.
+        \item Etablerte Databricks-miljø i Azure og utviklet transformasjonslogikk i DBT.
+        \item Bygget integrasjoner mot legacy on-prem systemer ved bruk av Data Factory og custom Python-script.
+        \item Resultat: En skalerbar og driftsvennlig skyløsning som har fjernet personavhengighet og muliggjort utvidet rapportering.
+    \end{itemize}
+
+    % --- NOAH ---
+    \cvrole{NOAH}{Hendelsesdrevet integrasjonsplattform}{integrasjonsutvikler/Platformutvikler}{}
+    \begin{itemize}
+        \item Designet og implementerte eventbaserte integrasjoner for å automatisere logistikk- og booking-prosesser.
+        \item Bygget en kostnadseffektiv serverless-arkitektur i GCP med Cloud Build, Cloud Run (Python), API Gateway og Pub/Sub.
+        \item Tok ansvar for teknisk ledelse og fasiliterte samarbeid på tvers av flere systemleverandører.
+        \item Resultat: Eliminering av manuelt arbeid og menneskelige feil i operasjonelle prosesser.
+    \end{itemize}
+
+    % --- TOMA ---
+    \cvrole{Toma}{Dataplattform for finans og salg}{Data Engineer/Platformutvikler}{}
+    \begin{itemize}
+        \item Implementerte sentral dataplattform i Google Cloud Platform (GCP).
+        \item Etablerte dataflyt fra ERP- og CRM-systemer inn i BigQuery med transformasjoner i Dataform.
+        \item Tilrettela dataprodukter for eksterne leverandører og interne rapporteringsformål.
+        \item Resultat: Muliggjort data-deling og sentral rapportering på sammenstilt data.
+    \end{itemize}
+
+    % --- Anlegg Øst Entreprenør ---
+    \cvrole{Anlegg Øst Entreprenør}{Integrasjonplatform for HR-relaterte prosesser}{Integrasjonsutvikler}{}
+    \begin{itemize}
+        \item Designe og implementere integrasjoner for automatisering av ansatt- og fraværsprosesser i Boomi.
+        \item Automatisere datasync, onboarding og offboarding av ansatte.
+        \item Komplekse integrasjoner for sync av fravær på tvers av timeførings-, HR- og lønnssytem.
+        \item Resultat: Økt oversikt og mindre menneskelige feil i føring på tvers av 5 ulike business-applikasjoner.
+    \end{itemize}
 }
